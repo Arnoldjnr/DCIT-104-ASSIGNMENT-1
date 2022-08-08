@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int d,f,g,h=0,sum=0;
+    cout<<"Enter any Number ";
+    cin>>d;
+    cout <<"Enter any Number ";
+    cin >> f;
+    while(d<=f)
+    {
+        h=0;
+        for(g=2;g<=d/2;g++)
+        {
+            if(d%g==0)
+            {
+                h=1;
+                break;
+            }
+        }
+
+        if(h==0)
+        {
+        sum=sum+d;
+        cout<<d<<"Is a prime number \n";
+        }
+        d=d+1;
+    }
+    cout<<"The sum of the prime number is " << sum;
+}
